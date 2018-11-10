@@ -1,0 +1,58 @@
+# theme: jekyll-theme-cayman
+
+# Site settings
+title: Csy Blog
+SEOTitle: 陈淑瑶的博客 | Csy Blog
+header-img: img/home-bg.png
+email: 6044407@qq.com
+description: "前端开发 | --- | 陈淑瑶，Web & Front-end Engineer | chenshuyao的个人博客呀"
+keyword: "chenshuyao, csy, 前端, Csy Blog, 博客，Web, Css, Javascript, vue"
+url: "http://chenshuyao.cn/"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+
+# avatar and Favicon
+# avatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
+favicon: favicon.ico
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "Web Developer <br/> ---"
+sidebar-avatar: /img/avatar.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+# SNS settings
+RSS: false
+weibo_username:     false
+zhihu_username:     false
+github_username:    IdeaEcho
+
+
+# Build settings
+paginate: 5
+plugins: [jekyll-paginate]
+# gems: [jekyll-paginate]
+
+
+# Gitalk
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: a84c2a57837302767371                            #生成的clientID
+  clientSecret: 847046720bec629fbd3580d8f3cc617ab9d3a27a    #生成的clientSecret
+  repo: IdeaEcho.github.io    #仓库名称
+  owner: IdeaEcho    #github用户名
+  admin: IdeaEcho
+  # distractionFreeMode: true #是否启用类似FB的阴影遮罩
+
+
+# Friends
+friends: [{
+  title: "wumeilian's github",
+  href: "https://github.com/wumeilian"
+}]
