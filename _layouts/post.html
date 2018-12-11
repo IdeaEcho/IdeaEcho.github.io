@@ -17,6 +17,10 @@ layout: default
         position: absolute;
         background: rgba(0,0,0, {{ page.header-mask }});
     }
+    .post-container .emoji {
+      display: inline-block;
+      margin: 0;
+    }
     {% endif %}
 </style>
 <header class="intro-header" >
@@ -108,7 +112,7 @@ layout: default
                 {% endif %}
 
 
-            </div>  
+            </div>
 
     <!-- Side Catalog Container -->
         {% if page.catalog %}
@@ -171,7 +175,7 @@ layout: default
 <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
 <script>
   var cloudTieConfig = {
-    url: document.location.href, 
+    url: document.location.href,
     sourceId: "",
     productKey: "de25fc98a6fe48b3bc8a7ae765da99a0",
     target: "cloud-tie-wrapper"
