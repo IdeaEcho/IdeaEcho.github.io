@@ -3,7 +3,7 @@
 # Site settings
 title: Csy Blog
 SEOTitle: 陈淑瑶的博客 | Csy Blog
-header-img: img/home-bg.png
+header-img: img/home-bg2.jpg
 email: 6044407@qq.com
 description: "前端开发 | --- | 陈淑瑶，Web & Front-end Engineer | chenshuyao的个人博客呀"
 keyword: "chenshuyao, csy, 前端, Csy Blog, 博客，Web, Css, Javascript, vue"
@@ -53,6 +53,6 @@ gitalk:
 
 # Friends
 friends: [{
-  title: "wumeilian's github",
-  href: "https://github.com/wumeilian"
+  title: "wumeilian's blog",
+  href: "https://meilianwu.com/"
 }]
