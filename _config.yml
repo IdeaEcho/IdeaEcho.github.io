@@ -6,7 +6,7 @@ SEOTitle: 陈淑瑶的博客 | Csy Blog
 header-img: img/home-bg2.jpg
 email: 6044407@qq.com
 description: "前端开发 | --- | 陈淑瑶，Web & Front-end Engineer | chenshuyao的个人博客呀"
-keyword: "chenshuyao, csy, 前端, Csy Blog, 博客，Web, Css, Javascript, vue"
+keyword: "陈淑瑶, 橙鼠药, chenshuyao, csy, 陈淑瑶的博客, Csy Blog, 博客, 前端, Web, Css, Javascript, vue"
 url: "http://chenshuyao.cn/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -14,6 +14,14 @@ baseurl: ""                             # for example, '/blog' if your blog host
 # avatar and Favicon
 # avatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
 favicon: favicon.ico
+
+# Analytics settings
+# Baidu Tongji
+ba_track_id: 'e86156d23996ffc318f764a3fdefa294'
+
+# Google Analytics
+ga_track_id: 'UA-134636983-1'
+ga_domain: 'chenshuyao.cn'
 
 
 # Sidebar settings
@@ -43,8 +51,8 @@ plugins: [jekyll-paginate,jemoji]
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: a84c2a57837302767371                            #生成的clientID
-  clientSecret: 847046720bec629fbd3580d8f3cc617ab9d3a27a    #生成的clientSecret
+  clientID: e88c985c0284a1546702                            #生成的clientID
+  clientSecret: d1cf8b8580eca871ae5eb03b23b799e163cfe080    #生成的clientSecret
   repo: IdeaEcho.github.io    #仓库名称
   owner: IdeaEcho    #github用户名
   admin: IdeaEcho

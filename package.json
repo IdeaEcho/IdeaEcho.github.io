@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/IdeaEcho/IdeaEcho.github.io/issues"
   },
-  "homepage": "https://github.com/IdeaEcho/IdeaEcho.github.io#readme"
+  "homepage": "https://github.com/IdeaEcho/IdeaEcho.github.io#readme",
+  "dependencies": {
+    "gitalk": "^1.5.0"
+  }
 }
