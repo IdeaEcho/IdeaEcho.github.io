@@ -10,8 +10,10 @@ tags:
     - 前端
     - css
     - 环形倒计时、进度条
+    - 渐变边框
 ---
 
+## 需求
 答题、问卷形式的活动经常用到的环形倒计时。进度条通常都是长条，有时候也有环形进度条的需求。倒计时是从有到无，相反的，进度条从无到有。实现方式差不多。
 
 ![环形倒计时截图](/img/circleCountDown/p1.gif) ![环形进度条](/img/circleCountDown/p4.gif)
@@ -226,3 +228,38 @@ tags:
 	</div>
 
 ```
+
+## 扩展-渐变边框的实现
+3月的时候，新需求用到了这个组件。但是设计了渐变的背景，如图。
+![p5](/img/circleCountDown/p5.png)
+
+因为border的颜色不能用linear-gradient，可以将渐变的这部分用其他方式实现。
+在在父容器用background: linear-gradient，先实现一个渐变的圆，然后子元素border: 12px solid transparent; 和 background-clip: padding-box; padding-box是指从padding区域（不含padding）开始向外裁剪背景。这样子元素的border区域显示的就是背景的渐变，从而实现渐变边框。
+
+```html
+<style type="text/scss">
+.bar--circle {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  background: linear-gradient(#697ad9,#b483de);
+}
+.circle {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background: #fff;
+    border: 12px solid transparent;
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+</style>
+<div class="bar--circle">
+  <div class="circle"></div>
+</div>
+```
+
+
+
+![p6](/img/circleCountDown/p6.gif)
