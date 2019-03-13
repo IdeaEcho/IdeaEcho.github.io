@@ -87,7 +87,7 @@ tags:
 ```
 
 
-再通过overflow: hidden;隐藏矩形框以外的部分，矩形的区域里就实现了倒计时的效果。
+再通过overflow: hidden;隐藏矩形框以外的部分，矩形的区域里就实现了倒计时的效果。这样右半圆的效果就实现啦，左半圆的实现也同理。
 
 ![p3](/img/circleCountDown/p3.gif)
 
