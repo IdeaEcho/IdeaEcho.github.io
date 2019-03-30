@@ -260,6 +260,27 @@ tags:
 </div>
 ```
 
-
-
 ![p6](/img/circleCountDown/p6.gif)
+
+## 后记-SVG实现
+除了以上的方式实现环形倒计外，其实还可以用SVG来实现，而且使用SVG的实现性价比更高。大致思路：
+
+```html
+<style>
+  circle {
+    -webkit-transition: stroke-dasharray .25s;
+    transition: stroke-dasharray .25s;
+  }
+</style>
+<svg width="440" height="440" viewbox="0 0 440 440">
+    <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#D1D3D7" fill="none"></circle>
+    <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#00A5E0" fill="none" transform="matrix(0,-1,1,0,0,440)" stroke-dasharray="0 1069"></circle>
+</svg>
+<script type="text/javascript">
+var range = document.querySelector("#range"), circle = document.querySelectorAll("circle")[1];
+if (range && circle) {
+  var percent = 30 / 100, perimeter = Math.PI * 2 * 170;
+  circle.setAttribute('stroke-dasharray', perimeter * percent + " " + perimeter * (1- percent));
+}
+</script>
+```
