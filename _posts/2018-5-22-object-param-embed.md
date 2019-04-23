@@ -7,8 +7,7 @@ header-img: "img/home-bg2.jpg"
 header-mask:  0.5
 catalog: true
 tags:
-    - html
-    - 视频
+    - Web
 ---
 
 ## 1、&lt; object &gt;

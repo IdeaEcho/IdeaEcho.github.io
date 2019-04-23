@@ -7,7 +7,8 @@ header-img: "img/common/banner.jpg"
 header-mask:  0.5
 catalog: true
 tags:
-    - js
+    - JavaScript
+    - 笔记
 ---
 
 ### 介绍

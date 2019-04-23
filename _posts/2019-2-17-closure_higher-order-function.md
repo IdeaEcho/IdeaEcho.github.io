@@ -8,7 +8,7 @@ header-mask:  0.5
 catalog: true
 tags:
     - JavaScript
-    - reduce
+    - 笔记
 ---
 
 ## 高阶函数

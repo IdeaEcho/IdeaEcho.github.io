@@ -7,9 +7,8 @@ header-img: "img/common/banner.jpg"
 header-mask:  0.5
 catalog: true
 tags:
-    - 前端
-    - js
-    - h5
+    - Web
+    - JavaScript
 ---
 
 ## 需求

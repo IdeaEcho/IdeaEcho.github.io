@@ -7,10 +7,8 @@ header-img: "img/home-bg2.jpg"
 header-mask:  0.5
 catalog: true
 tags:
-    - 前端
-    - css
-    - 环形倒计时、进度条
-    - 渐变边框
+    - Web
+    - CSS
 ---
 
 ## 需求
