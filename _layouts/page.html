@@ -160,7 +160,7 @@ layout: default
             {% endif %}
             {% if site.github_username %}
             <li>
-              <a target="_blank" href="https://github.com/{{ site.github_username }}">
+              <a target="_blank" href="https://github.com/{{ site.github_username }}" rel="noopener noreferrer">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -177,7 +177,7 @@ layout: default
       <h5>FRIENDS</h5>
       <ul class="list-inline">
         {% for friend in site.friends %}
-        <li><a target="_blank" href="{{friend.href}}">{{friend.title}}</a></li>
+        <li><a target="_blank" href="{{friend.href}}" rel="noopener noreferrer">{{friend.title}}</a></li>
         {% endfor %}
       </ul>
       {% endif %}

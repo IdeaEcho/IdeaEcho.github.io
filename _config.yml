@@ -26,7 +26,7 @@ ga_domain: 'chenshuyao.cn'
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Web Developer <br/> 盐与律己，甜以待人 "
+sidebar-about-description: "Web Developer <br/> 盐于律己，甜以待人 "
 sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
