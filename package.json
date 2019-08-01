@@ -1,5 +1,5 @@
 {
-  "name": "IdeaEcho.github.io",
+  "name": "csy-blog",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -21,5 +21,12 @@
   "homepage": "https://github.com/IdeaEcho/IdeaEcho.github.io#readme",
   "dependencies": {
     "gitalk": "^1.5.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0"
   }
 }
