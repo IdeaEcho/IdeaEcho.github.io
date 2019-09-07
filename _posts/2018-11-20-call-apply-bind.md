@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "bind,"
-subtitle:   "call,apply,bind的实现"
+title:      "call、apply、bind的实现"
+subtitle:   ""
 author:     "csy"
 header-img: "img/home-bg2.jpg"
 header-mask:  0.5
