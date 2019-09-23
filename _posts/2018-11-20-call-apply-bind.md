@@ -21,9 +21,9 @@ tags:
 
 ## call的实现
 思路：
-1、将函数设为对象的属性
-2、执行该函数
-3、删除该函数
+1) 将函数设为对象的属性
+2) 执行该函数
+3) 删除该函数
 
 ```javascript
 Function.prototype.myCall = function (context = window, ...rest) {
@@ -51,10 +51,13 @@ Function.prototype.myApply = function (context = window, params=[]) {
 ```
 
 ## bind的实现
-思路：
-1、返回一个函数
-2、可以传入参数
-3、bind 返回的函数作为构造函数的时候，bind 时指定的 this 值会失效，但传入的参数依然生效。
+- 八卦一下  
+this的绑定规则：默认绑定、隐式绑定、显示绑定、new绑定，为了解决隐式丢失问题（被隐式绑定的函数会丢失绑定对象），有一种强制绑定的用法，即创建一个包裹函数，传入所有的参数，并返回接收到的所有值。由于是非常常用的模式，所以ES5提供了内置的方法 Function.prototype.bind
+
+- 思路：  
+1) 返回一个函数
+2) 可以传入参数
+3) bind 返回的函数作为构造函数的时候，bind 时指定的 this 值会失效，但传入的参数依然生效。
 
 ```javascript
 Function.prototype.myBind = function (context, ...rest) {
