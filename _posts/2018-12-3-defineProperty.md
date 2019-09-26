@@ -33,10 +33,10 @@ var obj = {
 //数据描述demo
 //对象已有的属性添加特性描述
 Object.defineProperty(obj, "test", {
-  configurable: true | false, //默认为false
-  enumerable: true | false,//默认为false
   value: '任意类型的值', //默认为undefined
-  writable: true | false //默认为false
+  writable: true | false //可读 默认为false
+  configurable: true | false, //可配置 默认为false
+  enumerable: true | false,//可枚举 默认为false 可枚举会出现在 for ...in 循环中
 });
 
 console.log(obj) //{test: "任意类型的值"}
