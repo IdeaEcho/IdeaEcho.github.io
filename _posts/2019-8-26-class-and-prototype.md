@@ -14,9 +14,9 @@ tags:
 # 1. 混合对象“类”
 javascript中类和其他语言中的类完全不同。传统面向类的语言中父类和子类、子类和实例之间其实是复制操作，但是在javascript中并没有复制，对象之间是通过内部的 [[Prototype]] 链委托关联的，这样一个对象就可以通过委托访问另一个对象的属性和函数。
 
-多态看起来像是从子类引用父类，但是本质上就是引用。
+多态看起来像是从子类引用父类，但是本质上就是引用。继承的本质是重写原型对象，代之以一个新类型的实例。
 
-混入模式（显式混入、隐式混入）可以用来模拟类的复制行为，但是很丑陋。而且显式混入无法完全模拟类的复制行为，因为对象（还有函数）只能复制对共享函数对象的引用。
+混入模式（显式混入、隐式混入）可以用来模拟类的复制行为，但是很丑陋。而且显式混入无法完全模拟类的复制行为，因为对象只能复制对共享函数对象的引用。
 
 ## 1.1 类式继承（构造函数继承）
 即在子类构造函数的内部调用父类构造函数，使得自身获得父类的方法和属性。
@@ -37,6 +37,8 @@ var a = new Child('a')
 
 ## 1.2 原型继承
 即子类型从超类型的原型对象里继承方法
+优点：
+- 父类的方法得到了复用
 缺点：
 - 如果父类包含引用类型的属性，那么所有子类的实例都会共享该属性
 - 在创建子类实例时，不能向父类的构造函数传递参数
@@ -49,28 +51,41 @@ Father.prototype.myName = function () {
 }
 
 function Child(name) {
-  this.name = name
-  // 或者 Father.call(this, name)
+  this.age = 1
 }
 //ES6之前的写法
 // Child.prototype = Object.create(Father.prototype) //原型继承
 // Child.prototype.constructor = Child
-//ES6写法
+//ES6写法 
 Object.setPrototypeOf(Child.prototype, Father.prototype)
 
 var a = new Child('a')
 console.log(a.myName());
 ```
+> 网上很多博客原型继承的方式是 `Child.prototype = new Father()`。但是我看<<你不知道的javascirpt>>书中说道这种用法有副作用。虽然会创建一个关联到 Child.prototype 的新对象，但是它使用了 Father(..) 的“构造函数调用”，如果函数 Father 有一些副作用（比如写日志、修改状态、注册到其他对象、给 this 添加数据属性，等等）的话，就会影响到 Child() 的“后代”。我写demo试了下，确实如此。
 ## 1.3 组合继承
 结合类式继承和组合继承，用类式继承属性，而原型继承方法。避免了属性的公用。
+缺点：调用两次父类构造函数
 ```javascript
+function Father(name) {
+  this.name = name
+}
+Father.prototype.myName = function () {
+  return this.name
+}
 
+function Child(name) {
+  Father.call(this, name)
+}
+Object.setPrototypeOf(Child.prototype, Father.prototype)
+
+var a = new Child('a')
+console.log(a.myName());
 ```
 ## 1.4 寄生组合继承
 ```javascript
 
 ```
-## mixin的实现
 
 
 # 2. 原型链
