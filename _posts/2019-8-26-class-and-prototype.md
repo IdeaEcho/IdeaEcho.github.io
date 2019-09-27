@@ -18,6 +18,60 @@ javascript中类和其他语言中的类完全不同。传统面向类的语言�
 
 混入模式（显式混入、隐式混入）可以用来模拟类的复制行为，但是很丑陋。而且显式混入无法完全模拟类的复制行为，因为对象（还有函数）只能复制对共享函数对象的引用。
 
+## 1.1 类式继承（构造函数继承）
+即在子类构造函数的内部调用父类构造函数，使得自身获得父类的方法和属性。
+缺点：
+- 因为继承的是对象本身，每次实例化都保存内存中，有性能问题
+- 不可变，无法修改和添加新的方法
+```javascript
+function Father() {
+  this.name = name
+}
+
+function Child() {
+  Father.call(this, name)
+}
+
+var a = new Child('a')
+```
+
+## 1.2 原型继承
+即子类型从超类型的原型对象里继承方法
+缺点：
+- 如果父类包含引用类型的属性，那么所有子类的实例都会共享该属性
+- 在创建子类实例时，不能向父类的构造函数传递参数
+```javascript
+function Father(name) {
+  this.name = name
+}
+Father.prototype.myName = function () {
+  return this.name
+}
+
+function Child(name) {
+  this.name = name
+  // 或者 Father.call(this, name)
+}
+//ES6之前的写法
+// Child.prototype = Object.create(Father.prototype) //原型继承
+// Child.prototype.constructor = Child
+//ES6写法
+Object.setPrototypeOf(Child.prototype, Father.prototype)
+
+var a = new Child('a')
+console.log(a.myName());
+```
+## 1.3 组合继承
+结合类式继承和组合继承，用类式继承属性，而原型继承方法。避免了属性的公用。
+```javascript
+
+```
+## 1.4 寄生组合继承
+```javascript
+
+```
+## mixin的实现
+
 
 # 2. 原型链
 [[Prototype]]机制就是对象中的一个内部链接引用另外一个对象。如果在第一个对象上没有找到需要的属性或者方法引用，引擎就会继续在[[Prototype]]关联的对象上进行查找，以此类推，这一系列对象的链接被称为"原型链"。
@@ -95,3 +149,6 @@ a在整条[[prototype]]链中是否有指向 Foo.prototype 的对象。instanceo
 a是否出现在b的[[prototype]]链中
 
 
+## 参考
+
+<<你不知道的javascirpt>>

@@ -52,3 +52,6 @@ createIndex的三个参数分别为索引名称、索引所在的属性、配置
 :sparkles: [github地址](https://github.com/IdeaEcho/demo/tree/master/src/packages/IndexedDB)
 
 :sparkles: [demo戳这里](https://htmlpreview.github.io/?https://github.com/IdeaEcho/demo/blob/master/release/view/index.html#/IndexedDB)
+
+# 初衷
+从学生到工作写了几年的代码，觉得虽然学习新语言，新框架的主要目的是为了解决实际问题，其中更重要的是要每次入门了一门新技术后要及时留下点学习的痕迹，方便以后忘记可以从学习轨迹中迅速上手。
