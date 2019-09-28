@@ -146,7 +146,7 @@ Child.prototype = Object.create(Father.prototype) //原型继承
 Child.prototype.constructor = Child
 ```
 
-## ES6 class
+## 1.5 ES6 class
 看完前面的，再看es6的语法糖真是太甜了。
 ```javascript 
 class Father {
