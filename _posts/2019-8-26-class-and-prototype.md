@@ -20,9 +20,11 @@ javascript中类和其他语言中的类完全不同。传统面向类的语言�
 
 ## 1.1 类式继承（构造函数继承）
 即在子类构造函数的内部调用父类构造函数，使得自身获得父类的方法和属性。
+
 缺点：
 - 因为继承的是对象本身，每次实例化都保存内存中，有性能问题
 - 不可变，无法修改和添加新的方法
+
 ```javascript
 function Father() {
   this.name = name
@@ -37,11 +39,14 @@ var a = new Child('a')
 
 ## 1.2 原型继承
 即子类型从超类型的原型对象里继承方法
+
 优点：
 - 父类的方法得到了复用
+
 缺点：
 - 如果父类包含引用类型的属性，那么所有子类的实例都会共享该属性
 - 在创建子类实例时，不能向父类的构造函数传递参数
+
 ```javascript
 function Father(name) {
   this.name = name
@@ -62,10 +67,14 @@ Object.setPrototypeOf(Child.prototype, Father.prototype)
 var a = new Child('a')
 console.log(a.myName());
 ```
+
 > 网上很多博客原型继承的方式是 `Child.prototype = new Father()`。但是我看<<你不知道的javascirpt>>书中说道这种用法有副作用。虽然会创建一个关联到 Child.prototype 的新对象，但是它使用了 Father(..) 的“构造函数调用”，如果函数 Father 有一些副作用（比如写日志、修改状态、注册到其他对象、给 this 添加数据属性，等等）的话，就会影响到 Child() 的“后代”。我写demo试了下，确实如此。
+
 ## 1.3 组合继承
 结合类式继承和组合继承，用类式继承属性，而原型继承方法。避免了属性的公用。
+
 缺点：调用两次父类构造函数
+
 ```javascript
 function Father(name) {
   this.name = name
@@ -87,7 +96,6 @@ console.log(a.myName());
 
 ```
 
-
 # 2. 原型链
 [[Prototype]]机制就是对象中的一个内部链接引用另外一个对象。如果在第一个对象上没有找到需要的属性或者方法引用，引擎就会继续在[[Prototype]]关联的对象上进行查找，以此类推，这一系列对象的链接被称为"原型链"。
 
@@ -103,12 +111,13 @@ for(key in myObject) {
 }
 console.log("a" in myObject);
 ```
+
 ## 属性设置和屏蔽
+> 应尽量避免使用屏蔽，以及注意隐式屏蔽的情况
+
 - 原型链上的已有xxx非只读属性，会直接在myObject中添加一个新的属性xxx，它是屏蔽属性。
 - 原型链上的已有xxx只读属性，则无法创建同名的xxx屏蔽属性。
 - 原型链上的已有xxx但它是一个setter，则会调用这个setter，xxx不会被添加到myObject，也不会重新定义xxx。
-
-应尽量避免使用屏蔽，以及注意隐式屏蔽的情况
 
 ```javascript
 var anotherObject = { a:2 };
@@ -120,7 +129,9 @@ console.log(anotherObject.a) //2
 console.log(myObject.a) //3
 console.log(myObject.hasOwnProperty("a")) //true
 ```
+
 ## 误解
+
 ```javascript
 function Foo(name) {
   this.name = name;
@@ -133,6 +144,7 @@ var b = new Foo("b");
 a.myName(); // "a" 
 b.myName(); // "b"
 ```
+
 这段代码，看起来好像创建 a 和 b 时会把 Foo.prototype 对象复制到这两个对象中，然而事实并不是这样。
 在创建的过程中，a 和 b 的内部 [[Prototype]] 都会关联到 Foo.prototype 上。
 当 a 和 b 中无法找到 myName 时，它会通过委托，在 Foo.prototype 上找到。
@@ -144,11 +156,13 @@ var a1 = new Foo();
 a1.constructor === Foo; // false! 
 a1.constructor === Object; // true! 
 ```
+
 构造函数只是通过默认的 [[prototype]] 委托指向Foo
 Foo.prototype的 .constructor 属性只是Foo函数在声明时的默认属性
 但是这个对象也没有.constructor 属性（不过默认的 Foo.prototype 对象有这个属性！），所以它会继续委托，这次会委托给委托链顶端的 Object.prototype。这个对象有 .constructor 属性，指向内置的 Object(..) 函数。
 
 ## 关联原型
+
 ```javascript
 // ES6 之前需要抛弃默认的 Bar.prototype 
 Bar.ptototype = Object.create( Foo.prototype ); 
@@ -157,13 +171,13 @@ Bar.prototype Object.setPrototypeOf( Bar.prototype, Foo.prototype );
 ```
 
 ## 找到继承祖先
-`a instanceof Foo` 
+
+`a instanceof Foo`  
 a在整条[[prototype]]链中是否有指向 Foo.prototype 的对象。instanceof只能判断对象和函数之间的关系。无法判断两个对象间的关系
 
-`a.isPrototypeOf(b)`
+`a.isPrototypeOf(b)`  
 a是否出现在b的[[prototype]]链中
 
 
 ## 参考
-
 <<你不知道的javascirpt>>
