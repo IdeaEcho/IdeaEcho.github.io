@@ -122,6 +122,7 @@ console.log(a.myName());
   - 不会重复调用父类
 - 缺点：
   - 封装性一般
+
 ```javascript
 function Father(name, friends) {
   this.name = name
