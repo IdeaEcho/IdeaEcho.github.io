@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/IdeaEcho/IdeaEcho.github.io#readme",
   "devDependencies": {
-    "axios": ">=0.18.1",
+    "axios": ">=0.21.1",
     "gitalk": "^1.5.0",
     "grunt": "^1.0.4",
     "grunt-banner": "^0.6.0",
