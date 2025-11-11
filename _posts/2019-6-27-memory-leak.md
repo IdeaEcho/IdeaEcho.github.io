@@ -37,7 +37,7 @@ js有个垃圾回收机制，会按照固定的时间间隔，周期性的找出
 ### 二、内存泄漏排查以及填坑
 
 ##### 1、情境
-![before](/img/memoryLeak/before.png)
+![before](/img/memory_leak/before.png)
 Memory Usage 从 232MB 过了 20h 后稳步提升到 1.17G，妥妥的内存泄漏。然而运维的监控是按整个容器颗粒度的，知道了内存泄漏并不能直接知道问题所在，但是缩小了问题域，导致服务器内存泄漏可能有几种原因：
 - 代码编写不当。
 - 使用的外部模块有内存泄漏。
@@ -49,7 +49,7 @@ Memory Usage 从 232MB 过了 20h 后稳步提升到 1.17G，妥妥的内存泄�
 
 另外```pm2 monit``` 可以实时查看容器的内存使用量、CPU等。由于项目 vue ssr 的页面不多，在本地访问其中几个页面时，可以看到 pm2 monit 上的内存使用率瞬间多了十几兆，但关闭页面后，内存并没有回收，然后就code review 对应的页面，查看是否有内存泄露的代码进行修改。
 
-![monit](/img/memoryLeak/monit.png)
+![monit](/img/memory_leak/monit.png)
 
 ##### 3、vue ssr 可能造成泄漏的位置
 
@@ -70,4 +70,4 @@ global mixin 会给每个 Vue 实例一个拷贝，而不是引用
 
 ### 三、总结
 修改后的内存监控曲线情况有所好转。
-![after](/img/memoryLeak/after.png)
+![after](/img/memory_leak/after.png)

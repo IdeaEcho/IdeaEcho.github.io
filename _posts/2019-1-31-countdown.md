@@ -14,7 +14,7 @@ tags:
 ## 需求
 答题、问卷形式的活动经常用到的环形倒计时。进度条通常都是长条，有时候也有环形进度条的需求。倒计时是从有到无，相反的，进度条从无到有。实现方式差不多。
 
-![环形倒计时截图](/img/circleCountDown/p1.gif) ![环形进度条](/img/circleCountDown/p4.gif)
+![环形倒计时截图](/img/circle_count_down/p1.gif) ![环形进度条](/img/circle_count_down/p4.gif)
 
 ## 实现思路
 
@@ -34,7 +34,7 @@ tags:
 
 但是它一直是一个闭环，为了实现从完整的圆环逐渐减少至消失，css中有两种方案一个是消失display:none;，另一个是隐藏。这种情况下，消失不适用。那么就是隐藏了，隐藏有两种，一种是真的隐藏了，另一种是被遮住了。这里用到了overflow: hidden;超出的部分隐藏和遮住达到隐藏的效果。
 
-![p2](/img/circleCountDown/p2.png)
+![p2](/img/circle_count_down/p2.png)
 
 最终思路如下：
 -   把整个圆环分成左右两部分。要从箭头处开始覆盖，可以写个半圆，先把这个半圆旋转到矩形的另一边隐藏起来，然后再慢慢改变这个半圆环的角度，让它显示出来。
@@ -46,7 +46,7 @@ tags:
 
 #### 1.先实现右半圆
 
-![p2](/img/circleCountDown/p1.png)
+![p2](/img/circle_count_down/p1.png)
 
 ```css
 .circle__right {
@@ -61,7 +61,7 @@ tags:
 因为是border-top和border-right，这样写出来的半圆如上图。没关系，transform: rotate(-135deg);旋转-135度，正好能隐藏半个圆。然后再加上动画，旋转45度时正好能显示半个圆。
 
 #### 2.加上动画
-![p3](/img/circleCountDown/p2.gif)
+![p3](/img/circle_count_down/p2.gif)
 
 ```css
 .circle__right {
@@ -87,7 +87,7 @@ tags:
 
 再通过overflow: hidden;隐藏矩形框以外的部分，矩形的区域里就实现了倒计时的效果。这样右半圆的效果就实现啦，左半圆的实现也同理。
 
-![p3](/img/circleCountDown/p3.gif)
+![p3](/img/circle_count_down/p3.gif)
 
 ```html
 <style type="text/css">
@@ -134,7 +134,7 @@ tags:
 </div>
 ```
 ## 源码和demo
-> :sparkles: [demo戳这里](https://htmlpreview.github.io/?https://github.com/IdeaEcho/demo/blob/master/release/view/index.html#/circleCountDown)
+> :sparkles: [demo戳这里](https://htmlpreview.github.io/?https://github.com/IdeaEcho/demo/blob/master/release/view/index.html#/circle_count_down)
 
 ```html
   <style type="text/scss">
@@ -229,7 +229,7 @@ tags:
 
 ## 扩展-渐变边框的实现
 3月的时候，新需求用到了这个组件。但是设计了渐变的背景，如图。
-![p5](/img/circleCountDown/p5.png)
+![p5](/img/circle_count_down/p5.png)
 
 因为border的颜色不能用linear-gradient，可以将渐变的这部分用其他方式实现。
 在在父容器用background: linear-gradient，先实现一个渐变的圆，然后子元素border: 12px solid transparent; 和 background-clip: padding-box; padding-box是指从padding区域（不含padding）开始向外裁剪背景。这样子元素的border区域显示的就是背景的渐变，从而实现渐变边框。
@@ -258,7 +258,7 @@ tags:
 </div>
 ```
 
-![p6](/img/circleCountDown/p6.gif)
+![p6](/img/circle_count_down/p6.gif)
 
 ## 后记-SVG实现
 除了以上的方式实现环形倒计外，其实还可以用SVG来实现，而且使用SVG的实现性价比更高。大致思路：
