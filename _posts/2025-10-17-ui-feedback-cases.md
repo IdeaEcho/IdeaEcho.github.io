@@ -126,9 +126,6 @@ Bad Case: 夜游主题虽然大部份用户满意度较高（平均4.2分，满�
 
 {% include video.html src="/video/post/ui_feedback_cases/chapter.mp4" type="mp4" caption="电子章操作演示" %}
 
-{% include video.html src="/video/post/ui_feedback_cases/chapter_demo.mp4" type="mp4" caption="电子章互动后打开H5页面" %}
-
-
 ### 创作工具方向
 
 #### 📈10. 输入框增加灰色底纹
