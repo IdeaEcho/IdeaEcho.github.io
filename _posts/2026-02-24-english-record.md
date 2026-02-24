@@ -30,9 +30,7 @@ Got it, the campaign sounds crucial! Let me take a look at our team's schedule f
 
 1. I understand this campaign is important, but our
 development schedule is already **fully booked**
-until mid-next month.
-
-我理解这个campaign很重要,但我们的开发排期到下中旬已经满了。
+until mid-next month.（我理解这个campaign很重要,但我们的开发排期到下中旬已经满了。）
 
 
 1. We're facing some resource constraints with two
@@ -117,6 +115,7 @@ This day would make me feel relaxed and happy. 
 	•	(xxx) will be facilitating today's meeting. (xx将主持今天的会议。)
 
 ### 场景 1.3: 线上会议 (Online/Lark Specifics)
+	•	Sorry, I was on mute. (抱歉，我刚才静音了。)
 	•	(XXX), you're on mute. (xx，你没开麦。)
 	•	Could you mute yourself? There's some background noise. (你能静音吗？有点背景噪音。)
 	•	I think there's an echo. (我好像听到回音了。)
@@ -924,103 +923,103 @@ This day would make me feel relaxed and happy. 
 ## 第一章：需求沟通与澄清 (Requirements & Clarification)
 ### 场景 1.1: 理解业务目标 (Understanding Business Goals)
 
-Could you walk me through the user story for this feature? (能带我过一下这个功能的用户故事吗？)
+	•	Could you walk me through the user story for this feature? (能带我过一下这个功能的用户故事吗？)
 
-What is the business goal or the problem we're trying to solve here? (我们想要达成的业务目标，或者说想要解决的问题是什么？)
+	•	What is the business goal or the problem we're trying to solve here? (我们想要达成的业务目标，或者说想要解决的问题是什么？)
 
-Who are the target users for this new functionality? (这个新功能的目标用户是谁？)
+	•	Who are the target users for this new functionality? (这个新功能的目标用户是谁？)
 
-How will we measure the success of this feature? (我们将如何衡量这个功能的成功？)
+	•	How will we measure the success of this feature? (我们将如何衡量这个功能的成功？)
 
-What's the priority of this task compared to others in the backlog? (和待办列表里的其他任务相比，这个任务的优先级是怎样的？)
+	•	What's the priority of this task compared to others in the backlog? (和待办列表里的其他任务相比，这个任务的优先级是怎样的？)
 
-I'm trying to get a better handle on the requirements. (我正试着更好地把握需求。)
+	•	I'm trying to get a better handle on the requirements. (我正试着更好地把握需求。)
 
-What are the key performance indicators (KPIs) for this project? (这个项目的关键绩效指标(KPI)是什么？)
+	•	What are the key performance indicators (KPIs) for this project? (这个项目的关键绩效指标(KPI)是什么？)
 
-What's the end game for this feature? (这个功能的最终目标是什么？)
+	•	What's the end game for this feature? (这个功能的最终目标是什么？)
 
 ### 场景 1.2: 提问与澄清 (Asking for Clarification)
-Just to clarify, are we saying that...? (澄清一下，我们是说……吗？)
+	•	Just to clarify, are we saying that...? (澄清一下，我们是说……吗？)
 
-I'm not quite following. Could you elaborate on that point? (我有点没跟上。可以详细阐述一下那一点吗？)
+	•	Could you elaborate on that point? (可以详细阐述一下那一点吗？)
 
-What should be the expected behavior if the user enters invalid data? (如果用户输入了无效数据，预期的行为应该是什么？)
+	•	What should be the expected behavior if the user enters invalid data? (如果用户输入了无效数据，预期的行为应该是什么？)
 
-Could you provide a mockup or a design spec for this? (能提供一个设计稿或者设计规格说明吗？)
+	•	Could you provide a mockup or a design spec for this? (能提供一个设计稿或者设计规格说明吗？)
 
-What are the acceptance criteria (AC) for this story? (这个用户故事的验收标准（AC）是什么？)
+	•	What are the acceptance criteria (AC) for this story? (这个用户故事的验收标准（AC）是什么？)
 
-Let me rephrase that to make sure I understood correctly. (我换种方式复述一下，确保我的理解是正确的。)
+	•	Let me rephrase that to make sure I understood correctly. (我换种方式复述一下，确保我的理解是正确的。)
 
-Is this a hard requirement, or is it nice to have? (这是一个硬性要求，还是一个“有了更好”的选项？)
+	•	Is this a hard requirement, or is it nice to have? (这是一个硬性要求，还是一个“有了更好”的选项？)
 
-What's the happy path for this user journey? (这个用户流程的理想路径是怎样的？)
+	•	What's the happy path for this user journey? (这个用户流程的理想路径是怎样的？)
 
-We should also consider the unhappy paths, like network errors or invalid inputs. (我们也应该考虑异常路径，比如网络错误或无效输入。)
+	•	We should also consider the unhappy paths, like network errors or invalid inputs. (我们也应该考虑异常路径，比如网络错误或无效输入。)
 
-There's a lot to unpack here. Let's break it down. (这里面信息量很大。我们把它分解一下吧。)
+	•	There's a lot to unpack here. Let's break it down. (这里面信息量很大。我们把它分解一下吧。)
 
-The definition of 'done' for this task is unclear. (这个任务的“完成”定义不清晰。)
+	•	The definition of 'done' for this task is unclear. (这个任务的“完成”定义不清晰。)
 
-This is more of a nice-to-have than a must-have. (这更像是一个“有了更好”的功能，而不是“必须有”的。)
+	•	This is more of a nice-to-have than a must-have. (这更像是一个“有了更好”的功能，而不是“必须有”的。)
 
 ### 场景 1.3: 技术可行性评估 (Technical Feasibility Assessment)
-From a technical standpoint, this looks feasible. (从技术角度来看，这看起来是可行的。)
+	•	From a technical standpoint, this looks feasible. (从技术角度来看，这看起来是可行的。)
 
-This might be challenging due to our current architecture. (考虑到我们现有的架构，这个实现起来可能会有挑战。)
+	•	This might be challenging due to our current architecture. (考虑到我们现有的架构，这个实现起来可能会有挑战。)
 
-Let's do a quick sanity check before we proceed. (在我们继续之前，先来快速做一个合理性检查。)
+	•	Let's do a quick sanity check before we proceed. (在我们继续之前，先来快速做一个合理性检查。)
 
 ### 场景 1.4: 工作量评估 (Effort Estimation)
-My rough estimate for this would be around 3 to 5 story points. (我对这个任务的粗略估算大概是3到5个故事点。)
+	•	My rough estimate for this would be around 3 to 5 story points. (我对这个任务的粗略估算大概是3到5个故事点。)
 
-Could you provide a ballpark estimate? (你能给一个大概的估算吗？)
+	•	Could you provide a ballpark estimate? (你能给一个大概的估算吗？)
 
-What's the level of effort (LOE) for this task? (这个任务的工作量级是多少？)
+	•	What's the level of effort (LOE) for this task? (这个任务的工作量级是多少？)
 
-This task has a lot of moving parts. (这个任务牵涉到很多变动的环节。)
+	•	This task has a lot of moving parts. (这个任务牵涉到很多变动的环节。)
 
-The scope of this story seems too large for one sprint. Can we split it? (这个用户故事的范围对于一个冲刺来说似乎太大了。我们能拆分它吗？)
+	•	The scope of this story seems too large for one sprint. Can we split it? (这个用户故事的范围对于一个冲刺来说似乎太大了。我们能拆分它吗？)
 
-Just to set expectations, this might take a few days. (先说明一下预期，这可能需要几天时间。)
+	•	Just to set expectations, this might take a few days. (先说明一下预期，这可能需要几天时间。)
 
-Can we get a gut check on the complexity of this? (我们能凭直觉快速评估一下这个的复杂度吗？)
+	•	Can we get a gut check on the complexity of this? (我们能凭直觉快速评估一下这个的复杂度吗？)
 
-This is a quick win. We should prioritize it. (这是一个能快速见效的任务。我们应该优先处理它。)
+	•	This is a quick win. We should prioritize it. (这是一个能快速见效的任务。我们应该优先处理它。)
 
-This task is a low-hanging fruit. We can finish it quickly. (这个任务很容易完成。我们可以快速搞定。)
+	•	This task is a low-hanging fruit. We can finish it quickly. (这个任务很容易完成。我们可以快速搞定。)
 
 ### 场景 1.5: 沟通风险与依赖 (Communicating Risks & Dependencies)
-This estimate depends on the third-party API being stable. (这个估算取决于第三方 API 是不是稳定。)
+	•	This estimate depends on the third-party API being stable. (这个估算取决于第三方 API 是不是稳定。)
 
-A potential risk here is the performance impact on the database. (这里的一个潜在风险是可能会对数据库造成性能影响。)
+	•	A potential risk here is the performance impact on the database. (这里的一个潜在风险是可能会对数据库造成性能影响。)
 
-What are the dependencies for this task? (这个任务的依赖项有哪些？)
+	•	What are the dependencies for this task? (这个任务的依赖项有哪些？)
 
-We have a tight deadline for this project. (我们这个项目的截止日期很紧。)
+	•	We have a tight deadline for this project. (我们这个项目的截止日期很紧。)
 
-This will require a coordinated effort across multiple teams. (这需要跨多个团队的协同努力。)
+	•	This will require a coordinated effort across multiple teams. (这需要跨多个团队的协同努力。)
 
-Let's create a RAID log for risks, assumptions, issues, and dependencies. (我们来创建一个RAID日志，记录风险、假设、问题和依赖。)
+	•	Let's create a RAID log for risks, assumptions, issues, and dependencies. (我们来创建一个RAID日志，记录风险、假设、问题和依赖。)
 
 ### 场景 1.6: 提出替代方案 (Proposing Alternatives)
-Have we considered an alternative approach, for example... (我们有没有考虑过一个替代方案，比如……)
+	•	Have we considered an alternative approach, for example... (我们有没有考虑过一个替代方案，比如……)
 
-A simpler solution might be to... (一个更简单的解决方案可能是……)
+	•	A simpler solution might be to... (一个更简单的解决方案可能是……)
 
-Let's not reinvent the wheel. There might be an existing library for this. (我们不要重复造轮子了。可能已经有现成的库可以做这个。)
+	•	Let's not reinvent the wheel. There might be an existing library for this. (我们不要重复造轮子了。可能已经有现成的库可以做这个。)
 
-Let's not boil the ocean. We can start with a smaller scope. (我们别想一口吃个胖子。可以从一个更小的范围开始。)
+	•	Let's not boil the ocean. We can start with a smaller scope. (我们别想一口吃个胖子。可以从一个更小的范围开始。)
 
-Let's not get ahead of ourselves. Let's focus on the MVP first. (我们别操之过急。先专注于最小可行产品吧。)
+	•	Let's not get ahead of ourselves. Let's focus on the MVP first. (我们别操之过急。先专注于最小可行产品吧。)
 
 ### 场景 1.7: 达成共识 (Aligning & Confirming)
-Let's get on the same page before we start coding. (在开始写代码之前，我们先达成共识。)
+	•	Let's get on the same page before we start coding. (在开始写代码之前，我们先达成共识。)
 
 ## 第二章：架构与技术设计 (Architecture & Design)
 ### 场景 2.1: 阐述设计思路 (Explaining Design Ideas)
-Here's my proposal for the high-level architecture. (这是我关于高阶架构的方案。)
+	•	Here's my proposal for the high-level architecture. (这是我关于高阶架构的方案。)
 
 I'm thinking of using a microservices architecture for this. (我正在考虑为此使用微服务架构。)
 
@@ -1645,10 +1644,6 @@ Sorry to interrupt, but I have a quick question. (抱歉打断一下，我有个
 If I could just jump in for a moment... (如果我可以插一句的话……)
 
 Let's double-click on that issue. (我们来深入探讨一下那个问题。)
-
-Sorry, I was on mute. (抱歉，我刚才静音了。)
-
-Can you see my screen? (你能看到我的屏幕吗？)
 
 I'm having trouble with my audio. (我的音频设备有问题。)
 
